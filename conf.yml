@@ -1,0 +1,31 @@
+Node_1: 
+  services: 
+    - 
+        name: "App1" 
+        url: "http://www.example.com/api/data"
+        request_type: "POST"
+        headers: 
+          custom-header1: "header data1"
+          cutom-header2: "header data2"
+        request_params: 
+          param1: "{'data':'mydata'}"
+        success_string: "Success"
+  logfile: "/tmp/"
+  interval: 3
+
+Node_2: 
+  services: 
+    - 
+        name: "App2" 
+        url: "http://www.example.com/api2/data"
+        request_type: "POST"
+        headers: 
+          X_AUTH_PUB: "233333"
+          X_AUTH_PRIV: "444444"
+        request_params: 
+          param1: "val1"
+          param2: "val2"
+        success_string: "Success"
+  logfile: "/tmp/"
+  interval: 10
+
